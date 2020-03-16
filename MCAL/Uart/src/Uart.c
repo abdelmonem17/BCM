@@ -35,7 +35,7 @@ __attribute__((weak)) void Uart_Int_Send()
 	if (sent_Data_index)
 	{
 
-		USART_DATA_REG=sent_Data_Buffer[--sent_Data_index];
+		//USART_DATA_REG=sent_Data_Buffer[--sent_Data_index];
 		
 	}
 	else
@@ -127,11 +127,9 @@ uint8 Uart_Init(Uart_Lconfg_S *uart_Lcfg)
 ************************************************************************************/
 inline void Uart_Send(char data)
 {
-	
-	
+		
 		USART_DATA_REG=data;
-	
-	
+
 }
 
 inline uint8 Uart_SendIsReadyInterrupt(void)
